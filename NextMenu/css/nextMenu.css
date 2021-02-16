@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  height: 2rem;
+  width: 100%;
+  background-color: #cc183d;
+}
+
+.menu_box {
+  display: grid;
+  display: -moz-grid;
+  position: absolute;
+  width: 100%;
+  top: 2rem;
+  height: 0;
+  overflow: hidden;
+  background: rgb(255,255,255);
+  box-shadow: 2px 4px 6px rgba(140,140,140,0.8);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr 20fr 1fr;
+  place-items: stretch stretch;
+  transition: all 1s;
+  opacity: 0;
+}
+
+.menu_term {
+  display: grid;
+  display: -moz-grid;
+  grid-template-columns: 100%;
+  background: white;
+  grid-template-rows: 1fr 4fr;
+  overflow: hidden;
+  border-radius: 1.8rem;
+  grid-column: 2 / 3;
+  width: 100%;
+  box-sizing: border-box;
+  border: solid 4px #cc183d;
+  place-self: center center;
+  opacity: inherit;
+}
+
+.menu_title {
+  display: table;
+  text-align: center;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border-bottom: ridge 1px rgba(220,220,220,0.9);
+  box-shadow: 0 3px 5px rgba(180,180,180,0.95);
+  opacity: inherit;
+}
+
+.menu_title > span {
+  display: table-cell;
+  vertical-align: middle;
+  opacity: inherit;
+}
+
+.menu_child_box {
+  display: grid;
+  height: 6rem;
+  max-width: 100%;
+  grid-auto-columns: 21.25%;
+  grid-auto-flow: column dense;
+  grid-template-columns: repeat(auto-fill,21.25%);
+  grid-gap: 5%;
+  place-self: stretch stretch;
+  place-items: center center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  opacity: inherit;
+}
+
+
+.menu_child_box > div {
+  display: table;
+  width: 80%;
+  text-align: center;
+  height: 3rem;
+  color: #666;
+  border: solid 1px #dcdcdcd9;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 6px #888;
+  border-radius: 1rem;
+  place-self: center center;
+  opacity: inherit;
+}
+
+.menu_child_box > div:active {
+  background: #cc183d;
+  color: white;
+}
+
+
+.menu_child_box > div > a {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: inherit;
+  font-family: "隶书";
+  opacity: inherit;
+}
