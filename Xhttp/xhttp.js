@@ -38,9 +38,9 @@ class Xhttp {
         let that = this;
         this.xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
-                nextBack(JSON.parse(this.responseText))  // 响应成功执行
+                nextBack(JSON.parse(this.responseText));  // 响应成功执行
             } else {
-                that.interceptor(this.status)  // 响应异常拦截
+                that.interceptor(this.status);  // 响应异常拦截
             }
         }
         this.xhttp.open("GET", url, async);
@@ -56,9 +56,11 @@ class Xhttp {
         let that = this;
         this.xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
-                nextBack(JSON.parse(this.responseText))  // 响应成功执行
+                nextBack(JSON.parse(this.responseText));  // 响应成功执行
             } else {
-                that.interceptor(this.status)  // 响应异常拦截
+                if (this.readyState === 4) {
+                    that.interceptor(this.status);  // 响应异常拦截
+                }
             }
         }
         args = JSON.stringify(args);  // json格式转化为字符串
@@ -125,4 +127,10 @@ class Xhttp {
     }
 }
 
-export default Xhttp
+
+var xhttp = new Xhttp();
+xhttp.get('http://127.0.0.1:8000/index',function (data) {
+    console.log(data);
+});
+
+// export default Xhttp

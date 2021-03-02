@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navDiv {
+        display: table;
+        width: 100%;
+        height: 55px;
+    }
+
+    .nav_a {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+
+    .nav_a:hover {
+        background: #ccc;
+    }
+
+    .nav_a span {
+        border-bottom: solid 4px #cc183d;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #2a2c2d;
+        border-radius: 6px;
+    }
+
+</style>
+
+<header class="header">
+    <div class="navigation">
+        <!-- LOGO -->
+        <div class="logo">
+            <a class="logo_img" href="/index" title="乘风破浪社区"></a>
+        </div>
+
+        <!-- 导航条 -->
+        <nav>
+            <div class="navDiv">
+                <a class="nav_a" href="/index"><span>首页</span></a>
+                <a class="nav_a" href="/index"><span>首页</span></a>
+                <a class="nav_a" href="/index"><span>首页</span></a>
+                <a class="nav_a" href="/index"><span>首页</span></a>
+            </div>
+        </nav>
+        <!--  搜索框  -->
+        <form>
+            <input type="search" name="SearchBus" placeholder="帖子、板块、用户">
+            <!--				<button type="submit" name="SearchButton"></button>-->
+        </form>
+    </div>
+</header>
+</body>
+</html>
