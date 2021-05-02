@@ -1,2 +1,2 @@
 # cfpl-assembly
-CFPL社区组件
+The front-end component of the CFPL community project.
